@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: #141414;
+  font-family: "Varela Round", sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -100px;
+  background-color: rgba(31, 31, 31, 0.8);
+}
+nav .city-name {
+  width: 100%;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 10px;
+  text-align: center;
+}
+
+#dark {
+  border-bottom: 3px solid #ea9443;
+  background-color: #1f1f1f;
+  box-shadow: #1f1f1f 0px 0px 8px 4px;
+  transition: 0.5s;
+}
+#dark .city-name {
+  text-align: left;
+  transition: 0.5s;
+}
+
+.pageimage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  background-image: url("../background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pageimage #chicago-icon {
+  width: 200px;
+  height: 200px;
+}
+.pageimage #more {
+  width: 170px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(31, 31, 31, 0.8);
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.pageimage #more:hover {
+  background-color: #ea9443;
+  transform: scale(1.1);
+  animation: textAnimation 1.5s infinite;
+}
+@keyframes textAnimation {
+  0% {
+    font-size: 16px;
+    transform: translateY(0);
+  }
+  50% {
+    font-size: 18px;
+    transform: translateY(3px);
+  }
+  100% {
+    font-size: 16px;
+    transform: translateY(0);
+  }
+}
+
+.main {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin: 10px auto;
+}
+.main .card {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: #1f1f1f;
+}
+.main .card:hover {
+  transition: 0.05s;
+  transform: scale(1.05);
+}
+.main .card .card-name {
+  width: 100%;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border-bottom: 2px solid #ea9443;
+}
+.main .card .card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: #1f1f1f 0px 0px 8px 4px;
+}
+.main .card .card-info {
+  width: 100%;
+}
+.main .card .card-info .attraction-type,
+.main .card .card-info .price-range {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 15px;
+}
+.main .card .card-info .attraction-type .attraction-type-value,
+.main .card .card-info .attraction-type .price-range-value,
+.main .card .card-info .price-range .attraction-type-value,
+.main .card .card-info .price-range .price-range-value {
+  color: #f9d17a;
+  font-size: 20px;
+}
+.main .card .exit-btn {
+  display: none;
+}
+.main .card .card-info-detail {
+  display: none;
+}
+.main .card-open {
+  z-index: 2;
+  width: 95%;
+  max-width: 800px;
+  height: 95vh;
+  top: 50%;
+  right: 50%;
+  translate: 50% -50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: scroll;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: #1f1f1f;
+  animation: testone 0.5s linear;
+}
+.main .card-open .card-name {
+  width: 100%;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border-bottom: 2px solid #ea9443;
+}
+.main .card-open .card-img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: #1f1f1f 0px 0px 8px 4px;
+}
+.main .card-open .card-info {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.main .card-open .card-info .attraction-type,
+.main .card-open .card-info .price-range {
+  width: 100%;
+  height: 25px;
+  color: #ffffff;
+  font-size: 20px;
+}
+.main .card-open .card-info .attraction-type .attraction-type-value,
+.main .card-open .card-info .attraction-type .price-range-value,
+.main .card-open .card-info .price-range .attraction-type-value,
+.main .card-open .card-info .price-range .price-range-value {
+  color: #f9d17a;
+  font-size: 20px;
+}
+.main .card-open .exit-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  color: #ffffff;
+  background-color: #1f1f1f;
+  border: 2px solid #ea9443;
+  border-radius: 100%;
+}
+.main .card-open .card-info-detail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .card-open .card-info-detail .description-lable {
+  font-size: 20px;
+  color: #ffffff;
+  border-bottom: 2px solid #ea9443;
+}
+.main .card-open .card-info-detail .description {
+  margin-bottom: 30px;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #1f1f1f;
+  padding: 10px;
+}
+.main .card-open .card-info-detail .map {
+  width: 100%;
+  height: 50vh;
+  border: 0;
+  margin: auto;
+  margin-bottom: 20px;
+  box-shadow: #1f1f1f 0px 0px 8px 4px;
+}
+.main .card-open .card-info-detail .ticket-btn {
+  width: 200px;
+  height: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #a16236;
+}
+.main .card-open .card-info-detail .ticket-btn:hover {
+  transition: 0.1s;
+  background-color: #ea9443;
+  transform: scale(1.1);
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -150px;
+  right: 0;
+  border-top: 3px solid #ea9443;
+  background-color: #1f1f1f;
+  box-shadow: #1f1f1f 0px 0px 8px 4px;
+}
+footer .footer-text, footer .footer-class {
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px;
+}
+footer .footer-class {
+  color: #ea9443;
+}
+
+/*# sourceMappingURL=style.css.map */

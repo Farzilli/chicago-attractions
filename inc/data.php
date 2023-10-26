@@ -1,0 +1,58 @@
+<?php
+
+$arr = [
+    [
+        "name" => "The Art Institute of Chicago",
+        "img" => "./img/art-inst.png",
+        "type" => "museo",
+        "price" => 3,
+        "description" => "Situato nel cuore di Chicago, l'Art Institute è uno dei musei d'arte più importanti al mondo. La sua collezione spazia dall'arte antica a quella moderna e include capolavori come Nighthawks di Edward Hopper e American Gothic di Grant Wood. Oltre alle opere d'arte, il museo ospita anche mostre speciali che offrono un'ampia varietà di esperienze culturali.",
+        "maplink" => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5941.2341480858195!2d-87.63195304609377!3d41.879584500000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca3e2d94695%3A0x4829f3cc9ca2d0de!2sArt%20Institute%20of%20Chicago!5e0!3m2!1sit!2sit!4v1698353510347!5m2!1sit!2sit",
+        "ticket" => "https://www.artic.edu/",
+    ],
+    [
+        "name" => "Millennium Park",
+        "img" => "./img/park.png",
+        "type" => "parco",
+        "price" => 0,
+        "description" => "Questo parco urbano all'avanguardia è una delle principali attrazioni di Chicago. Ospita alcune delle opere d'arte pubbliche più emblematiche della città, inclusa la scultura a forma di fagiolo chiamata Cloud Gate che riflette lo skyline circostante. Oltre alle opere d'arte, il parco offre spazi verdi rilassanti, un anfiteatro all'aperto e una serie di eventi culturali e musicali.",
+        "maplink" => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11881.916412755361!2d-87.63903089218746!3d41.882552399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca68a4f9c03%3A0x44182cdcb5a91004!2sMillennium%20Park!5e0!3m2!1sit!2sit!4v1698353697694!5m2!1sit!2sit",
+        "ticket" => "https://www.viaggi-usa.it/millennium-park-chicago/",
+    ],
+    [
+        "name" => "Navy Pier",
+        "img" => "./img/nevy-pier.png",
+        "type" => "attrazione",
+        "price" => 0,
+        "description" => "Situato lungo le rive del Lago Michigan, Navy Pier è un'importante destinazione turistica di Chicago. Con una vasta gamma di ristoranti, negozi, attrazioni e spettacoli, il molo offre una varietà di attività per persone di tutte le età. Dalle ruote panoramiche alle crociere sul lago, ci sono molte opzioni per divertirsi. ",
+        "maplink" => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.046210448088!2d-87.60766932391472!3d41.89186327124024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2b4d91f12edb%3A0xd0acdb96b088a4dc!2sNavy%20Pier!5e0!3m2!1sit!2sit!4v1698353819397!5m2!1sit!2sit",
+        "ticket" => "https://navypier.org/",
+    ],
+    [
+        "name" => "Willis Tower Skydeck",
+        "img" => "./img/willis-tower.png",
+        "type" => "terazza",
+        "price" => 4,
+        "description" => "Precedentemente conosciuta come Sears Tower, la Willis Tower è un'icona di Chicago. Il suo Skydeck offre una vista mozzafiato sulla città e sulla regione circostante, con la possibilità di provare l'emozione di stare su un balcone di vetro sospeso a 1.353 piedi sopra il suolo. ",
+        "maplink" => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.6500060903486!2d-87.63848992391539!3d41.878876071241656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2cbee269fbbb%3A0xcf09307f0945d4fd!2sSkydeck!5e0!3m2!1sit!2sit!4v1698354108461!5m2!1sit!2sit",
+        "ticket" => "https://theskydeck.com/?gaw_campaign_id=2065618251&gaw_ad_group_id=76550109336&gaw_remote_client_id=9058833535&gclid=CjwKCAjwnOipBhBQEiwACyGLuuBLJAsfvm2S_mGoytiEmFRwoDl3Y210ci3MwiJjG7Nh7tU96Z2OXhoC_zAQAvD_BwE",
+    ],
+    [
+        "name" => "Wrigley Field",
+        "img" => "./img/wrigley-field.png",
+        "type" => "stadio",
+        "price" => 5,
+        "description" => "Questo storico stadio di baseball è la casa dei Chicago Cubs e rappresenta una parte fondamentale della cultura sportiva di Chicago. Oltre ad essere un luogo per gli appassionati di baseball, Wrigley Field offre un'esperienza autentica ricca di tradizioni e atmosfera unica.",
+        "maplink" => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.4141639428026!2d-87.65790762391181!3d41.94843837123409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3b2e59adf21%3A0x1cea3ee176ddd646!2sWrigley%20Field!5e0!3m2!1sit!2sit!4v1698354395792!5m2!1sit!2sit",
+        "ticket" => "https://tickets-center.com/search/wrigley-field-tickets/?venueId=1905&venueName=Wrigley+Field&vaid=93&tagid=229&atid=30001&nid=1&accid=9493575329&campaignid=8018971095&cid=395640274729&akwd=wrigley%20field%20ticket%20office&mt=p&network=g&dist=s&adposition=&device=c&ismobile=false&devicemodel=&placement=&target=&random=4762841377137781363&loc_physical_ms=1008297&loc_interest_ms=9021718&exid=&fiid=&vx=0&gclid=CjwKCAjwnOipBhBQEiwACyGLumRmOV1ie-2s-XT4nSMyc6TJrGk9DFKrrVBQVg5eERpj3k6KZUt86xoCmREQAvD_BwE",
+    ],
+    [
+        "name" => "Shedd Aquarium",
+        "img" => "./img/shedd-aquarium.png",
+        "type" => "acquario",
+        "price" => 4,
+        "description" => "Situato lungo il lago Michigan, lo Shedd Aquarium è uno dei più grandi acquari indoor al mondo. Ospita migliaia di specie marine e di acqua dolce, offrendo ai visitatori l'opportunità di esplorare e conoscere la vita acquatica da vicino. Oltre agli habitat degli animali, lo Shedd Aquarium offre anche spettacoli ed esperienze interattive che educano e intrattengono i visitatori di tutte le età.",
+        "maplink" => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.1753996044667!2d-87.61661292391598!3d41.86757257124286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2b635fb775f9%3A0x32059de3df50fbdf!2sShedd%20Aquarium!5e0!3m2!1sit!2sit!4v1698354516227!5m2!1sit!2sit",
+        "ticket" => "https://www.sheddaquarium.org/",
+    ],
+];

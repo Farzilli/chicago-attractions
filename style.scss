@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+// Variables
+$page-background: #141414;
+$card-background: #1f1f1f;
+$details: #ea9443;
+$details-light: #a16236;
+$text-color: #ffffff;
+$transition-time: 0.5s;
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// Body
+body {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: $page-background;
+    font-family: "Varela Round", sans-serif;
+}
+
+// Navigation
+nav {
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -100px;
+    background-color: rgba($card-background, 0.8);
+
+    .city-name {
+        width: 100%;
+        color: $text-color;
+        cursor: pointer;
+        font-size: 30px;
+        margin: 10px;
+        text-align: center;
+    }
+}
+
+// Dark mode
+#dark {
+    border-bottom: 3px solid $details;
+    background-color: $card-background;
+    box-shadow: $card-background 0px 0px 8px 4px;
+    transition: $transition-time;
+
+    .city-name {
+        text-align: left;
+        transition: $transition-time;
+    }
+}
+
+// Page image
+.pageimage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    background-image: url("../background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    #chicago-icon {
+        width: 200px;
+        height: 200px;
+    }
+
+    #more {
+        width: 170px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($card-background, 0.8);
+        color: $text-color;
+        border-radius: 5px;
+        font-size: 16px;
+        padding: 30px;
+        cursor: pointer;
+        transition: $transition-time;
+
+        &:hover {
+            background-color: $details;
+            transform: scale(1.1);
+            animation: textAnimation 1.5s infinite;
+        }
+
+        @keyframes textAnimation {
+            0% {
+                font-size: 16px;
+                transform: translateY(0);
+            }
+            50% {
+                font-size: 18px;
+                transform: translateY(3px);
+            }
+            100% {
+                font-size: 16px;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+// Main section
+.main {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin: 10px auto;
+
+    .card {
+        width: 300px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        background-color: $card-background;
+
+        &:hover {
+            transition: 0.05s;
+            transform: scale(1.05);
+        }
+
+        .card-name {
+            width: 100%;
+            margin-bottom: 20px;
+            color: $text-color;
+            border-bottom: 2px solid $details;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: $card-background 0px 0px 8px 4px;
+        }
+
+        .card-info {
+            width: 100%;
+
+            .attraction-type,
+            .price-range {
+                width: 100%;
+                height: 25px;
+                display: flex;
+                justify-content: space-between;
+                color: #ffffff;
+                font-size: 15px;
+
+                .attraction-type-value,
+                .price-range-value {
+                    color: #f9d17a;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .exit-btn {
+            display: none;
+        }
+
+        .card-info-detail {
+            display: none;
+        }
+    }
+
+    // Expanded card
+    .card-open {
+        z-index: 2;
+        width: 95%;
+        max-width: 800px;
+        height: 95vh;
+        top: 50%;
+        right: 50%;
+        translate: 50% -50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        overflow: scroll;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 15px;
+        background-color: $card-background;
+
+        animation: testone $transition-time linear;
+
+        .card-name {
+            width: 100%;
+            margin-bottom: 20px;
+            color: $text-color;
+            border-bottom: 2px solid $details;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 40vh;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: $card-background 0px 0px 8px 4px;
+        }
+
+        .card-info {
+            width: 100%;
+            margin-bottom: 20px;
+
+            .attraction-type,
+            .price-range {
+                width: 100%;
+                height: 25px;
+                color: #ffffff;
+                font-size: 20px;
+
+                .attraction-type-value,
+                .price-range-value {
+                    color: #f9d17a;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .exit-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 8px;
+            color: $text-color;
+            background-color: $card-background;
+            border: 2px solid $details;
+            border-radius: 100%;
+        }
+
+        .card-info-detail {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .description-lable {
+                font-size: 20px;
+                color: $text-color;
+                border-bottom: 2px solid $details;
+            }
+
+            .description {
+                margin-bottom: 30px;
+                font-size: 15px;
+                color: $text-color;
+                background-color: $card-background;
+                padding: 10px;
+            }
+
+            .map {
+                width: 100%;
+                height: 50vh;
+                border: 0;
+                margin: auto;
+                margin-bottom: 20px;
+                box-shadow: $card-background 0px 0px 8px 4px;
+            }
+
+            .ticket-btn {
+                width: 200px;
+                height: 20px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                padding: 20px;
+                border-radius: 5px;
+                color: $text-color;
+                background-color: $details-light;
+
+                &:hover {
+                    transition: 0.1s;
+                    background-color: $details;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+// Footer
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+    border-top: 3px solid $details;
+    background-color: $card-background;
+    box-shadow: $card-background 0px 0px 8px 4px;
+
+    .footer-text {
+        color: $text-color;
+        font-size: 20px;
+        text-align: center;
+        margin: 5px;
+    }
+
+    .footer-class {
+        @extend .footer-text;
+        color: $details;
+    }
+}
