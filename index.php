@@ -33,7 +33,7 @@
                     </div>
                     <button class="exit-btn">X</button>
                     <div class="card-info-detail">
-                        <h2 class="description-lable">descrizione:</h2>
+                        <h2 class="description-lable">info:</h2>
                         <p class="description">$description</p>
                         <iframe class="map" src="$linkMap" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <a href="$ticket" class="ticket-btn">buy the ticket!</a>
