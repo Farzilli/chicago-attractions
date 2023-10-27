@@ -22,7 +22,7 @@
                 HTML;
 
         if ($price === 0)
-            $card .= "gratis";
+            $card .= "free";
         else
             for ($i = 0; $i < $price; $i++) {
                 $card .= "€";
@@ -50,11 +50,11 @@
     <nav>
         <h1 class="city-name">Chicago</h1>
     </nav>
-    
+
     <div class="pageimage">
         <img src="./icon.png" alt="" id="chicago-icon">
         <button id="more">
-            scopri i posti da visitare!
+            discover the places to visit!
         </button>
     </div>
 
@@ -67,7 +67,7 @@
     </section>
 
     <footer>
-        <h1 class="footer-text">sito a cura di Francesco Arzilli </h1>
+        <h1 class="footer-text">site by Francesco Arzilli </h1>
         <h1 class="footer-class">5G</h1>
     </footer>
 </body>
